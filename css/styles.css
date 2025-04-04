@@ -68,6 +68,25 @@ nav.main-menu a {
     text-decoration: none;
     color: var(--color-white);
     font-weight: 300;
+    display: inline-block; /* Importante para hacer las transformaciones en el hover */
+    transition: transform 0.2s ease;
+}
+
+/* Hover en NAV */
+nav.main-menu ul li:not(:last-child) a:hover {
+    transform: scale(1.2);
+}
+
+nav.main-menu ul li:last-child:hover{
+    background-color: var(--color-white);
+    border: 1px solid var(--bg-blue);
+    border-radius: 3px;    
+}
+
+nav.main-menu ul li:last-child:hover a {
+    background-color: var(--color-white);
+    color: var(--bg-blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* MAIN */
@@ -111,6 +130,17 @@ section.hero a.hero__button {
     padding: 8px 16px;
     font-weight: 500;
     margin-bottom: 100px;
+}
+
+section.hero a.hero__button:hover {
+    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+
+section.hero a.hero__button:hover svg path {
+    /* stroke: var(--color-white); */
+    fill: var(--color-white);
 }
 
 section.categories {
