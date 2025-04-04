@@ -18,29 +18,32 @@ body {
     background-color: var(--bg-blue);
     font-family: var(--font-primary);
     background-image: url("../img/icon-background.jpg");
-    background-position: top right;
+    background-position: top right -100px;
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 40%;
 }
 
 
 .container {
     min-height: 100%;
-    max-width: 1300px;
+    max-width: 1700px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
 }
 
+/* HEADER */
 header.main-header {
     padding-top: 33px;
     padding-bottom: 33px;
     display: flex;
     align-items: center; /* Centra los elementos del menú */
-    gap: 148px;
+    gap: 130px;
+    margin-bottom: 30px;
 }
 
+/* MENÚ DE NAVEGACIÓN */
 nav.main-menu {
     width: 100%;
 }
@@ -50,7 +53,7 @@ nav.main-menu ul {
     padding: 0;
     display: flex;
     align-items: center; /* Centra los elementos del menú */
-    gap: 56px;
+    gap: 50px;
     list-style: none;
 }
 
@@ -65,4 +68,75 @@ nav.main-menu a {
     text-decoration: none;
     color: var(--color-white);
     font-weight: 300;
+}
+
+/* MAIN */
+
+section.hero {
+    max-width: 45%;
+}
+
+section.hero p:not(:has(a)),
+section.hero h1:not(:has(a)) {
+    /* 
+    Se pone el color blanco a todos los elementos de section hero exceptuando <a>
+    */
+    color: var(--color-white);
+}
+
+
+section.hero p.hero__initial {
+    font-size: 20px;
+}
+
+section.hero h1.hero__title {
+    margin: 0;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 32px;
+    font-weight: 700;
+}
+
+section.hero p.hero__subtitle {
+    padding-bottom: 20px;
+}
+
+section.hero a.hero__button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    max-width: fit-content;
+    padding: 8px 16px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+section.categories {
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: var(--color-white);
+    padding: 30px 130px;
+    transform: translate(-110px, 46px);
+}
+
+.category__icon {
+    width: 64px;
+}
+
+.category__title {
+    font-size: 16px;
+    color: var(--color-black);
+    margin-bottom: 0;
+}
+
+.category__description {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-gray);
+    margin-top: 10px;
 }
